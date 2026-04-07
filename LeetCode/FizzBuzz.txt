@@ -1,0 +1,20 @@
+*Intuition:
+Bài toán yêu cầu kiểm tra từng số 1 đến n áp dụng các quy tắc chia hết cho 3 và 5 
+Thay vì xứ lí nhiều trường hợp if- else ta có thể xây dựng kết quả bằng cách sau:
+- Nếu i chia hết cho 3 thêm " Fizz"
+- Nếu i chia hết cho 5 thêm " Buzz"
+- Nếu i không chia hết cho 3 hay 5 thì giữ nguyên số
+*Approach:
+1. Tạo vector result chứa kết quả
+2, duyệt i = 1 đến n
+với mỗi i xét
+ Khơi tạo chuỗi rổng s
+- i % 3 == 0 thì thêm "Fizz" vào s
+- i % 5 == 0 thì thêm "Buzz" vào s
+Nếu s vẫn rỗng thì chuyển i thành string bằng hàm to_string(i)
+ Add s vào vector result
+ sau đó trả về vector result
+* Time Complexity:
+O(n) vì duyệt qua n phần tử mỗi lần kiểm tra O(1)
+* Space complexity:
+O(n) vì lưu trong vector
