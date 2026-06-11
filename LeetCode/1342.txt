@@ -1,0 +1,19 @@
+1342. Number of steps to reduce a number to zero
+Given an integer num, return the number of steps to reduce it to zero.
+
+*Intuition:
+bài toán yêu cầu tìm số bước để giảm 1 số bất kì về không ta có thể áp dụng toán tử bitwise để xử lí số đó như sau :
+- nếu là số lẻ thì trừ 1 ( num && 1 == 1 -> num --)
+- nếu là số chẵn thì dịch phải( chia 2 )
+Cứ giảm dần như thế đến khi về 0.
+* Approach:
+1. khởi tạo steps = 0;
+2. duyệt vòng lặp while( num > 0) xét:
+- num & 1 == 1 -> num--;
+- num & 1 == 0 -> num >> 1;
+sau mỗi bước tăng steps 
+3, trả về giá trị số steps thu dc
+* Time complexity:
+O(log n) vì mỗi lần chia 2 
+* Space complexity: 
+O(1)vì không dùng thêm bộ nhớ
